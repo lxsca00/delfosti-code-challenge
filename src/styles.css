@@ -8,7 +8,7 @@
 :root {
   --main: #2c3639;
   --secondary: #3f4e4f;
-  --button: #dcd7c9;
+  --button: #A27B5C;
   --text: #dcd7c9;
 }
 
@@ -23,10 +23,12 @@ h3 {
 }
 body {
   margin: 2em;
+  background: var(--main);
+  color: var(--text);
 }
 body,
 input[type="text"],
 button {
-  color: #333;
+ 
   font-family: Cambria, Georgia;
 }

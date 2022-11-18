@@ -1,0 +1,8 @@
+<div class="products">
+    <div *ngFor="let product of products">
+      <p>{{ product._id }}</p>
+      <p>{{ product.name }}</p>
+      <img src="{{ path + product.slug }}" />
+    </div>
+  </div>
+  

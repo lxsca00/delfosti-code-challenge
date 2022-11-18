@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmojisComponent } from './emojis.component';
+import { HeroDetailComponent } from './hero-detail.component';
 
-describe('EmojisComponent', () => {
-  let component: EmojisComponent;
-  let fixture: ComponentFixture<EmojisComponent>;
+describe('HeroDetailComponent', () => {
+  let component: HeroDetailComponent;
+  let fixture: ComponentFixture<HeroDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EmojisComponent ]
+      declarations: [ HeroDetailComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EmojisComponent);
+    fixture = TestBed.createComponent(HeroDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
