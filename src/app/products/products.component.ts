@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PRODUCTS } from '../mock-products';
+import { Product } from '../products';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-products',
@@ -11,11 +12,15 @@ export class ProductsComponent implements OnInit{
   
   path: string = "../../assets"
 
-  products = PRODUCTS
+  products : Product[] |undefined
 
-  constructor(){}
+  getProducts(){
+    this.products = this.productService.getProducts()
+  }
+
+  constructor( private productService: ProductService){}
   ngOnInit(): void {
-    
+    this.getProducts()
   }
 }
 

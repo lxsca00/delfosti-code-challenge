@@ -9,6 +9,9 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { ProductsComponent } from './products/products.component';
 import { SearchComponent } from './search/search.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -17,11 +20,13 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     ProductsComponent,
     SearchComponent,
     HeroDetailComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

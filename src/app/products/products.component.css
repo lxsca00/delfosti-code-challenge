@@ -1,0 +1,27 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem
+}
+
+.products div {
+    background: var(--secondary);
+    border-radius: 1rem;
+    width: 20%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products div:hover{
+   cursor: pointer;
+   transform: scale(0.98);
+}
+
+.products p:first-child {
+    font-weight: 800;
+    color: var(--button);
+}
