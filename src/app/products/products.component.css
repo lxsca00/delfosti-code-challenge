@@ -3,7 +3,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 2rem
+    gap: 2rem;
+    margin: 1rem 0;
 }
 
 .products div {
@@ -24,4 +25,13 @@
 .products p:first-child {
     font-weight: 800;
     color: var(--button);
+}
+
+@media screen and (max-width: 480px) {
+    .products{
+        gap: 0.8rem
+    }
+    .products div {
+        width: 50%;
+    }
 }

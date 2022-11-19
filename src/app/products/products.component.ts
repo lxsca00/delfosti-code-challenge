@@ -1,27 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../products';
+import { Product } from '../products.interfaces';
 import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
 })
+export class ProductsComponent implements OnInit {
+  path: string = '../../assets';
 
-export class ProductsComponent implements OnInit{
-  
-  path: string = "../../assets"
+  products!: Product[];
 
-  products : Product[] |undefined
+  public page!: number ;
 
-  getProducts(){
-    this.productService.getProducts()
-    .subscribe(product => this.products = product)
-  }
-
-  constructor(private productService: ProductService){}
+  constructor(private productService: ProductService) {}
   ngOnInit(): void {
-    this.getProducts()
+    this.productService.getProducts().subscribe((res) => (this.products = res));
   }
 }
-

@@ -1,9 +1,13 @@
-<app-search></app-search>
+ <app-search></app-search>
 <div class="products">
-    <div *ngFor="let product of products">
+ 
+    <div *ngFor="let product of products | paginate: { itemsPerPage: 5, currentPage: page }">
       <p>{{ product._id }}</p>
       <p>{{ product.name }}</p>
       <img src="{{ path + product.slug }}" />
     </div>
+    
   </div>
+  <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
+  nextLabel="Siguiente"></pagination-controls>
   

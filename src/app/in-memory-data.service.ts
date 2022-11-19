@@ -2,7 +2,7 @@ import { getLocaleId } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
 import { Observable } from 'rxjs';
-import { Product } from './products';
+import { Product } from './products.interfaces';
 
 @Injectable({
   providedIn: 'root',

@@ -1,4 +1,12 @@
 h1 {
     color: var(--text);
     text-align: center;
+    text-transform: uppercase;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
