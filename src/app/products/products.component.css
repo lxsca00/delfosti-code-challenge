@@ -1,3 +1,40 @@
+.search-input {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+input[type=text] {
+    font-family: "Lato", sans-serif;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+:host /deep/ .ngx-pagination {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+:host /deep/ .ngx-pagination a {
+    color: var(--text) 
+}
+
+:host /deep/ .ngx-pagination a:hover {
+    background-color: #8b674d;
+    border-radius: 3px;
+}
+
+:host /deep/.ngx-pagination .current {
+    background: var(--button);
+    border-radius: 10%;
+    border: none;
+}
+
+:host /deep/.ngx-pagination .pagination-previous, :host /deep/.ngx-pagination .pagination-next{
+    color: var(--main);
+}
+
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +63,7 @@
     font-weight: 800;
     color: var(--button);
 }
+
 
 @media screen and (max-width: 480px) {
     .products{

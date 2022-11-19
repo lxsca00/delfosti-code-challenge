@@ -1,13 +1,28 @@
- <app-search></app-search>
+<div class="search-input">
+  <input
+    type="text"
+    [(ngModel)]="filterProducts"
+    name="filterProducts"
+    placeholder="Busca un producto"
+  />
+</div>
+
 <div class="products">
- 
-    <div *ngFor="let product of products | paginate: { itemsPerPage: 5, currentPage: page }">
-      <p>{{ product._id }}</p>
-      <p>{{ product.name }}</p>
-      <img src="{{ path + product.slug }}" />
-    </div>
-    
+  <div
+    *ngFor="
+      let product of products
+        | filter: filterProducts
+        | paginate: { itemsPerPage: 5, currentPage: page }
+    "
+  >
+    <p>{{ product._id }}</p>
+    <p>{{ product.name }}</p>
+    <img src="{{ path + product.slug }}" />
   </div>
-  <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
-  nextLabel="Siguiente"></pagination-controls>
-  
+</div>
+<pagination-controls
+  class="controls"
+  (pageChange)="page = $event"
+  previousLabel="Anterior"
+  nextLabel="Siguiente"
+></pagination-controls>

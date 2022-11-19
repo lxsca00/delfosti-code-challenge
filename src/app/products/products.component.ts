@@ -8,6 +8,8 @@ import { Product } from '../products.interfaces';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
+  constructor() {}
+
   path: string = '../../assets';
 
   products!: Product[];
@@ -16,7 +18,8 @@ export class ProductsComponent implements OnInit {
 
   private productsUrl = 'http://localhost:3000/products';
 
-  constructor() {}
+  filterProducts = '';
+
   ngOnInit(): void {
     //this.productService.getProducts().subscribe((res) => (this.products = res));
     fetch(this.productsUrl)
