@@ -3,9 +3,3 @@ export interface Product {
     name: string,
     slug: string
 }
-
-export interface FetchProductsResponse {
-    count: number,
-    next: null,
-    previous: null,
-}
