@@ -21,9 +21,5 @@ body {
   background: var(--main);
   color: var(--text);
 }
-body,
-input[type="text"],
-button {
- 
-  font-family: Cambria, Georgia;
-}
+
+
